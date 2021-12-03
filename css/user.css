@@ -1,0 +1,100 @@
+/*formulário*/
+.container5 {
+    margin: 0;
+    margin-left: 150px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'OpenSans-Light';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: orange ; /*fundo da section*/
+    flex-grow: 3;
+    width: 80%;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.container5 .title {
+    font-size: 35px;
+    text-align: center;
+    user-select: none;
+    color: black;
+    margin-left: 5px;
+}
+
+/*coluna do formulário no formado de grade*/
+.container5 .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+/*títulos das caixas de texto passando a ficar em cima delas*/
+.container5 .inputbox {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 40px;
+}
+
+/*tamanho e animação dos títulos das caixas*/
+.container5 .inputbox label {
+    position: relative;
+    top:0;
+    left: 10px;
+    font-size: 20px;
+    color: black; /*cor dos títulos das caixas*/
+    transition: .5s; /*animação dos títulos das caixas*/
+    cursor: text;
+
+}
+
+/*caixas do formulário*/
+.container5 .inputbox input {
+    position: absolute;
+    background-color: white; /*cor das caixas*/
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    transition: .5s;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.inputbox input:focus, .inputbox input:valid {
+    height: 100%;
+}
+
+.inputbox input:focus + label,
+.inputbox input:valid + label {
+    top: -40px;
+    left: 0;
+}
+
+/*botão de cadastrar do formulário*/
+.container5 button {
+    justify-self: center;
+    width: 200px;
+    height: 50px;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    background-color: #00008b; /*cor do botão*/
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 2px;
+    margin-left: 31.5px;
+}
+
+/*cor do texto de link do login e cadastro*/
+#nav a {
+    color:white;
+}
